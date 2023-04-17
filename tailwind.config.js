@@ -1,8 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
-    "./index.html",
-    "./src/**/*.{vue,js,ts,jsx,tsx}",
+    './index.html',
+    './src/**/*.{vue,js,ts,jsx,tsx}'
   ],
   theme: {
     colors: {
@@ -14,14 +14,14 @@ export default {
         dark: 'hsl(186, 14%, 43%)',
         DEFAULT: 'hsl(184, 14%, 56%)',
         light: 'hsl(185, 41%, 84%)',
-        extralight: 'hsl(189, 41%, 97%)',
+        extralight: 'hsl(189, 41%, 97%)'
       },
+      white: 'hsl(0, 100%, 100%)'
     },
     fontFamily: {
-      sans: ['Space Mono', 'monospace'],
+      sans: ['Space Mono', 'monospace']
     },
-    extend: {},
+    extend: {}
   },
-  plugins: [],
+  plugins: []
 }
-
