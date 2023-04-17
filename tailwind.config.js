@@ -16,7 +16,8 @@ export default {
         light: 'hsl(185, 41%, 84%)',
         extralight: 'hsl(189, 41%, 97%)'
       },
-      white: 'hsl(0, 100%, 100%)'
+      white: 'hsl(0, 100%, 100%)',
+      red: 'rgb(220 38 38)'
     },
     fontFamily: {
       sans: ['Space Mono', 'monospace']

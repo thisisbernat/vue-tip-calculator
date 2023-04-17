@@ -15,7 +15,7 @@
         <div>
           <p class="mb-2">Bill</p>
           <div class="relative flex items-center mx-auto">
-            <input class="w-full px-4 py-2 text-2xl text-right rounded bg-grayish-cyan-extralight text-cyan-dark"
+            <input class="w-full px-4 py-2 text-2xl text-right rounded cursor-pointer bg-grayish-cyan-extralight text-cyan-dark focus:outline-grayish-cyan"
               placeholder="0" value="142.55" />
             <img src="./assets/icon-dollar.svg" alt="" class="absolute left-4" />
           </div>
@@ -23,18 +23,18 @@
         <div>
           <p class="mb-2">Select Tip %</p>
           <div class="grid grid-cols-2 gap-5 text-2xl text-center text-white md:grid-cols-3">
-            <span class="py-2 rounded bg-cyan-dark">5%</span>
-            <span class="py-2 rounded bg-cyan-dark">10%</span>
-            <span class="py-2 rounded bg-cyan-dark">15%</span>
-            <span class="py-2 rounded bg-cyan-dark">25%</span>
-            <span class="py-2 rounded bg-cyan-dark">50%</span>
-            <span class="py-2 rounded bg-grayish-cyan-extralight text-grayish-cyan-dark">Custom</span>
+            <span class="py-2 rounded cursor-pointer bg-cyan-dark hover:bg-grayish-cyan-light hover:text-cyan-dark">5%</span>
+            <span class="py-2 rounded cursor-pointer bg-cyan-dark hover:bg-grayish-cyan-light hover:text-cyan-dark">10%</span>
+            <span class="py-2 rounded cursor-pointer bg-cyan-dark hover:bg-grayish-cyan-light hover:text-cyan-dark">15%</span>
+            <span class="py-2 rounded cursor-pointer bg-cyan-dark hover:bg-grayish-cyan-light hover:text-cyan-dark">25%</span>
+            <span class="py-2 rounded cursor-pointer bg-cyan-dark hover:bg-grayish-cyan-light hover:text-cyan-dark">50%</span>
+            <input class="py-2 text-center rounded cursor-pointer bg-grayish-cyan-extralight text-grayish-cyan-dark focus:outline-grayish-cyan" value="Custom"/>
           </div>
         </div>
         <div>
-          <p class="mb-2">Number of People</p>
+          <p class="flex justify-between mb-2">Number of People <span class="text-red">Can't be zero</span></p>
           <div class="relative flex items-center">
-            <input class="w-full px-4 py-2 text-2xl text-right rounded bg-grayish-cyan-extralight text-cyan-dark"
+            <input class="w-full px-4 py-2 text-2xl text-right rounded cursor-pointer bg-grayish-cyan-extralight text-cyan-dark focus:outline-grayish-cyan"
               placeholder="0" value="5" />
             <img src="./assets/icon-person.svg" alt="" class="absolute left-4" />
           </div>
@@ -44,13 +44,13 @@
         class="flex flex-col p-6 pt-8 text-base text-white md:justify-between md:p-10 md:pt-12 gap-7 bg-cyan-dark rounded-2xl lg:w-[28rem] lg:aspect-square">
         <div class="flex items-center justify-between">
           <p>Tip Amount<br /><span class="text-sm text-cyan">/ person</span></p>
-          <p class="text-4xl lg:text-5xl text-cyan">$4.27</p>
+          <p class="text-4xl lg:text-5xl text-cyan">$0.00</p>
         </div>
         <div class="flex items-center justify-between md:-mt-20 lg:-mt-32">
           <p>Total<br /><span class="text-sm text-cyan">/ person</span></p>
-          <p class="text-4xl lg:text-5xl text-cyan">$32.79</p>
+          <p class="text-4xl lg:text-5xl text-cyan">$0.00</p>
         </div>
-        <button class="py-3 text-2xl rounded bg-cyan text-cyan-dark">RESET</button>
+        <button class="py-3 text-2xl rounded cursor-pointer bg-cyan text-cyan-dark hover:bg-grayish-cyan-light">RESET</button>
       </div>
     </main>
   </div>
