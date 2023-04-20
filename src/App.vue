@@ -65,7 +65,7 @@ const resetAllValues = () => {
         </div>
       </div>
       <div
-        class="flex flex-col p-6 pt-8 text-base text-white md:justify-between md:p-10 md:pt-12 gap-7 bg-cyan-dark rounded-2xl lg:w-[28rem] lg:aspect-square">
+        class="flex flex-col p-6 pt-8 text-base text-white md:justify-between md:p-10 md:pt-12 gap-7 bg-cyan-dark rounded-2xl lg:w-[28rem] lg:aspect-square mb-8 md:mb-0">
         <div class="flex items-center justify-between">
           <p>Tip Amount<br /><span class="text-sm text-cyan">/ person</span></p>
           <p class="text-4xl lg:text-5xl text-cyan">${{tipAmount}}</p>
