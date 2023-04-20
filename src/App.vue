@@ -1,6 +1,7 @@
 <script setup>
 import { ref, computed } from 'vue'
 import LogoHeader from './components/LogoHeader.vue'
+// Todo: Extract components
 
 const buttonValues = [5, 10, 15, 25, 50]
 const billAmount = ref(null)
@@ -11,8 +12,8 @@ const finalTip = computed(() => customTip.value ?? tip.value)
 
 const formatNumber = (num) => parseFloat(num).toFixed(2)
 
-const totalAmountPerPerson = computed(() => formatNumber(billAmount.value && finalTip.value && people.value ? (billAmount.value * (1 + (finalTip.value / 100))) / people.value : 0))
-const tipAmount = computed(() => formatNumber(billAmount.value && finalTip.value && people.value ? (totalAmountPerPerson.value * people.value) - billAmount.value : 0))
+const totalAmountPerPerson = computed(() => formatNumber(billAmount.value && finalTip.value && (people.value && people.value > 0) ? (billAmount.value * (1 + (finalTip.value / 100))) / people.value : 0))
+const tipAmount = computed(() => formatNumber(billAmount.value && finalTip.value && (people.value && people.value > 0) ? (totalAmountPerPerson.value * people.value) - billAmount.value : 0))
 
 const selectTip = (value) => { tip.value = value }
 
@@ -40,7 +41,7 @@ const resetAllValues = () => {
       <div
         class="flex flex-col justify-between md:py-3 gap-6 text-sm lg:text-base text-grayish-cyan-dark lg:w-[28rem] md:aspect-square">
         <div>
-          <p class="flex justify-between mb-2">Bill <span class="text-red" v-if="isZero(billAmount)">Can't be zero</span></p>
+          <p class="mb-2">Bill</p>
           <div class="relative flex items-center mx-auto">
             <input class="w-full px-4 py-2 text-2xl text-right rounded cursor-pointer bg-grayish-cyan-extralight text-cyan-dark focus:outline-grayish-cyan"
               placeholder="0" v-model="billAmount" />
@@ -57,7 +58,7 @@ const resetAllValues = () => {
         <div>
           <p class="flex justify-between mb-2">Number of People <span class="text-red" v-if="isZero(people)">Can't be zero</span></p>
           <div class="relative flex items-center">
-            <input class="w-full px-4 py-2 text-2xl text-right rounded cursor-pointer bg-grayish-cyan-extralight text-cyan-dark focus:outline-grayish-cyan"
+            <input class="w-full px-4 py-2 text-2xl text-right rounded cursor-pointer bg-grayish-cyan-extralight text-cyan-dark" :class="isZero(people) ? 'focus:outline-red' : 'focus:outline-grayish-cyan'"
               placeholder="0" v-model="people" />
             <img src="./assets/icon-person.svg" alt="" class="absolute left-4" />
           </div>
